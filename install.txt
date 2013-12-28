@@ -1,0 +1,5 @@
+login anonymous
+force_install_dir /srv/steam/l4d2/
+app_update 222860 validate
+quit
+
