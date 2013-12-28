@@ -1,0 +1,9 @@
+deb {{ mirror_url }} wheezy main contrib non-free
+deb-src {{ mirror_url }} wheezy main contrib non-free
+
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+deb-src http://security.debian.org/ wheezy/updates main contrib non-free
+
+deb {{ mirror_url }} wheezy-updates main contrib non-free
+deb-src {{ mirror_url }} wheezy-updates main contrib non-free
+

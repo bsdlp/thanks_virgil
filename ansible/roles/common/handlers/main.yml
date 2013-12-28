@@ -1,0 +1,9 @@
+---
+- name: apt cache update
+  raw: /usr/bin/apt-get update
+
+- name: install steam authorized_keys
+  copy: dest=/srv/steam/.ssh/authorized_keys
+        owner=steam
+        mode=644
+
