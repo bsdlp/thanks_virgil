@@ -7,3 +7,15 @@ or local servers hosted by your friend in Florida.
 
 We can help!
 
+### Requirements
+
+Really easy. You need `python2`, `virtualenv`, `pip`.
+
+To do the needful:
+
+```
+$ virtualenv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+```
+
