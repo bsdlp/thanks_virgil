@@ -25,3 +25,13 @@
   - curl
   - lib32gcc1
 
+- name: create steam user
+  user: createhome=yes
+        home=/srv/steam
+        name=steam
+        state=present
+
+- name: create /srv/steam/.ssh dir
+  shell: /bin/mkdir /srv/steam/.ssh/ && /bin/chown -R steam /srv/steam/.ssh/
+  notify: install steam authorized_keys
+
