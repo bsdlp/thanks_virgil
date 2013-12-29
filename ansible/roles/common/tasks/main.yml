@@ -35,3 +35,9 @@
   shell: /bin/mkdir /srv/steam/.ssh/ && /bin/chown -R steam /srv/steam/.ssh/
   notify: install steam authorized_keys
 
+- name: grab steamcmd
+  shell: /bin/mkdir /srv/steam/bin && /usr/bin/curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | /bin/tar xzC /srv/steam/bin/
+
+- name: steamcmd install l4d2 server
+  shell: /srv/steam/bin/steamcmd +login anonymous +force_install_dir /srv/steam/l4d2 +app_update 222860 validate +quit
+
