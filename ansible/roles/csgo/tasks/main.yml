@@ -1,0 +1,11 @@
+---
+- name: steamcmd install csgo server
+  shell: /srv/steam/bin/steamcmd +login anonymous +force_install_dir /srv/steam/csgo +app_update 740 validate +quit
+
+- name: copy over server configuration
+  template: src=server.cfg
+            dest=/srv/steam/csgo/csgo/cfg/server.cfg
+            owner=steam
+            group=steam
+            mode=0644
+
