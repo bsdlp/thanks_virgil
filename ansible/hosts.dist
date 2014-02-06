@@ -1,0 +1,9 @@
+[csgo]
+go.burrito.sh
+
+[csgo:vars]
+SERVER_NAME=effed_for_dead
+
+[l4d2]
+l4d2.burrito.sh
+
