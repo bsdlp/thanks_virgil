@@ -2,6 +2,11 @@
 - name: steamcmd install csgo server
   shell: /srv/steam/bin/steamcmd +login anonymous +force_install_dir /srv/steam/csgo +app_update 740 validate +quit
 
+- name: generate passwords
+  set_fact: 
+            RCON_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.rcon length=5') }}
+            SV_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.pw length=5') }}
+
 - name: copy over server.cfg
   template: src=server.cfg
             dest=/srv/steam/csgo/csgo/cfg/server.cfg
