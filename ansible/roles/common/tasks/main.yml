@@ -42,7 +42,7 @@
   shell: /srv/steam/bin/steamcmd +login anonymous +force_install_dir /srv/steam/l4d2 +app_update 222860 validate +quit
 
 - name: copy over server configuration
-  template: src=server.cfg
+  template: src=l4d2.cfg
             dest=/srv/steam/l4d2/left4dead2/left4dead2/server.cfg
             owner=steam
             group=steam
