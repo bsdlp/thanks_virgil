@@ -43,3 +43,9 @@
             group=steam
             mode=0644
 
+- name: chown everything to steam
+  file: path=/srv/steam/
+        recurse=yes
+        state=directory
+        owner=steam
+
