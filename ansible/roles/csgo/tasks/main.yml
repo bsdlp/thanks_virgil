@@ -4,8 +4,8 @@
 
 - name: generate passwords
   set_fact: 
-            RCON_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.rcon length=5') }}
-            SV_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.pw length=5') }}
+            RCON_PASSWORD={{ lookup('password', 'creds/' + inventory_hostname + '.rcon length=5') }}
+            SV_PASSWORD={{ lookup('password', 'creds/' + inventory_hostname + '.pw length=5') }}
 
 - name: create /srv/steam/.steam/sdk32
   file: path=/srv/steam/.steam/sdk32
