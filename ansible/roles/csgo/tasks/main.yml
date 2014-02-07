@@ -48,7 +48,6 @@
             dest=/usr/local/bin/startcsgo
             mode=0755
             owner=steam
-            group=steam
 
 - name: chown everything to steam
   file: path=/srv/steam/
@@ -62,9 +61,4 @@
             mode=0755
             owner=root
             group=root
-
-- name: start csgoserver
-  service: name=csgoserver
-           state=started
-           pattern=srcds
 
