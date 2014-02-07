@@ -1,6 +1,6 @@
 ---
 - name: steamcmd install csgo server
-  shell: /srv/steam/bin/steamcmd +login anonymous +force_install_dir /srv/steam/csgo +app_update 740 validate +quit
+  shell: /srv/steam/bin/steamcmd.sh +login anonymous +force_install_dir /srv/steam/csgo +app_update 740 validate +quit
 
 - name: generate passwords
   set_fact: 
