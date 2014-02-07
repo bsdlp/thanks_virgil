@@ -43,6 +43,13 @@
             group=steam
             mode=0644
 
+- name: copy over start.sh
+  template: src=start.sh
+            dest=/usr/local/bin/startcsgo
+            mode=0755
+            owner=steam
+            group=steam
+
 - name: chown everything to steam
   file: path=/srv/steam/
         recurse=yes
