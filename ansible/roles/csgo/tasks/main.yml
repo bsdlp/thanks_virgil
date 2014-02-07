@@ -56,3 +56,15 @@
         state=directory
         owner=steam
 
+- name: install initscript
+  template: src=initscript
+            dest=/etc/init.d/csgoserver
+            mode=0755
+            owner=root
+            group=root
+
+- name: start csgoserver
+  service: name=csgoserver
+           state=started
+           pattern=srcds
+
