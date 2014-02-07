@@ -7,3 +7,6 @@
         owner=steam
         mode=644
 
+- name: purge nano
+  apt: pkg=nano state=absent purge=yes force=yes
+
