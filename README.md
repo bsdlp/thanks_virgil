@@ -1,11 +1,9 @@
-### Steam put up your favorite game for free.
+### Description
 
-What do we do now? Matchmaking doesn't work because all of the
-official and vanilla dedicated servers are taken. You now only have
-the choice of playing on janky-ass modded servers, servers in Africa,
-or local servers hosted by your friend in Florida.
-
-We can help!
+This is a Flask web application with ansible support to deploy srcds servers
+using your favorite virtual server provider (Linode). srcds servers are a huge
+pain in the butt to deploy, so this project aims to provide an easy and fast
+way to get from zero to gaming with one click.
 
 ### Requirements
 
