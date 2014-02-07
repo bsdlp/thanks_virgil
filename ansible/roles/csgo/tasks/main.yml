@@ -7,6 +7,15 @@
             RCON_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.rcon length=5') }}
             SV_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.pw length=5') }}
 
+- name: create /srv/steam/.steam/sdk32
+  file: path=/srv/steam/.steam/sdk32
+        owner=steam
+        state=directory
+
+- name: copy steamclient.so
+  command: /bin/cp /srv/steam/linux32/steamclient.so /srv/steam/.steam/sdk32/steamclient.so
+           creates=/srv/steam/.steam/sdk32/steamclient.so
+
 - name: fix csgo appid
   command: /bin/echo -n '740' > /srv/steam/csgo/appid.txt
            creates=/srv/steam/csgo/appid.txt
