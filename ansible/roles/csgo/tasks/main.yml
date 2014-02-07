@@ -17,11 +17,10 @@
            creates=/srv/steam/.steam/sdk32/steamclient.so
 
 - name: fix csgo appid
-  file: src=steam_appid.txt
+  copy: src=steam_appid.txt
+        dest=/srv/steam/csgo/steam_appid.txt
         owner=steam
         mode=0600
-        path=/srv/steam/csgo/steam_appid.txt
-        state=file
 
 - name: copy over server.cfg
   template: src=server.cfg
