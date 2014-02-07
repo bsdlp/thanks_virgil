@@ -17,8 +17,11 @@
            creates=/srv/steam/.steam/sdk32/steamclient.so
 
 - name: fix csgo appid
-  command: /bin/echo -n '740' > /srv/steam/csgo/appid.txt
-           creates=/srv/steam/csgo/appid.txt
+  file: src=steam_appid.txt
+        owner=steam
+        mode=0600
+        path=/srv/steam/csgo/steam_appid.txt
+        state=file
 
 - name: copy over server.cfg
   template: src=server.cfg
