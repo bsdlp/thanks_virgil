@@ -1,0 +1,7 @@
+---
+- hosts: csgo
+  user: root
+  roles:
+    - common
+    - csgo
+
