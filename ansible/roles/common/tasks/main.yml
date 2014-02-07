@@ -18,7 +18,7 @@
   raw: /usr/bin/dpkg --add-architecture i386
 
 - name: install required packages
-  apt: state=latest name=$item update_cache=yes
+  apt: state=latest name={{ item }} update_cache=yes
   notify: purge nano
   with_items:
   - screen
