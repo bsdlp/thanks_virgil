@@ -7,6 +7,10 @@
             RCON_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.rcon length=5') }}
             SV_PASSWORD={{ lookup('password', 'creds/' + role + '/' + host + '.pw length=5') }}
 
+- name: fix csgo appid
+  command: /bin/echo -n '740' > /srv/steam/csgo/appid.txt
+           creates=/srv/steam/csgo/appid.txt
+
 - name: copy over server.cfg
   template: src=server.cfg
             dest=/srv/steam/csgo/csgo/cfg/server.cfg
