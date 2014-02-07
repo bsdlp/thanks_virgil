@@ -1,9 +1,10 @@
 [csgo]
-go.burrito.sh
+192.168.1.1
 
 [csgo:vars]
 SERVER_NAME=effed_for_dead
-
-[l4d2]
-l4d2.burrito.sh
+CEVO_SERVERNAME=cevo
+CEVO_SERVERNAME_OT=cevo_ot
+mirror_url=http://newark.mirrors.linode.com/debian/
+deb_security_mirror_url=http://newark.mirrors.linode.com/debian-security/
 
