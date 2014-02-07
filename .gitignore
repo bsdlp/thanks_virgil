@@ -53,4 +53,5 @@ docs/_build/
 
 env
 ansible/hosts
+config.py
 
