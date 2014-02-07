@@ -13,7 +13,7 @@
         state=directory
 
 - name: copy steamclient.so
-  command: /bin/cp /srv/steam/linux32/steamclient.so /srv/steam/.steam/sdk32/steamclient.so
+  command: /bin/cp /srv/steam/bin/linux32/steamclient.so /srv/steam/.steam/sdk32/steamclient.so
            creates=/srv/steam/.steam/sdk32/steamclient.so
 
 - name: fix csgo appid
