@@ -31,10 +31,6 @@
         name=steam
         state=present
 
-- name: create /srv/steam/.ssh dir
-  shell: /bin/mkdir /srv/steam/.ssh/ && /bin/chown -R steam /srv/steam/.ssh/
-  notify: install steam authorized_keys
-
 - name: grab steamcmd
   shell: /bin/mkdir /srv/steam/bin && /usr/bin/curl http://media.steampowered.com/installer/steamcmd_linux.tar.gz | /bin/tar xz -C /srv/steam/bin/
 
