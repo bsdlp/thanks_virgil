@@ -2,6 +2,7 @@
 - hosts: csgo
   user: root
   roles:
+    - linode
     - common
     - csgo
 
