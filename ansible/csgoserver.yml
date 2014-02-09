@@ -8,7 +8,7 @@
     name: "{{ linode_label }}"
     plan: "{{ linode_plan }}"
     state: "{{ started }}"
-    swap: "{{ 128 }}"
+    swap: "128"
     wait: "{{ yes }}"
   register: linode
 
