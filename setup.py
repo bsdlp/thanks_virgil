@@ -2,6 +2,7 @@ from distutils.core import setup
 
 setup(
     name = "thanks_virgil",
+    package_dir = {'thanks_virgil': 'lib/thanks_virgil'},
     packages = ["thanks_virgil"],
     install_requires = ["ansible",
                         "jinja2",
