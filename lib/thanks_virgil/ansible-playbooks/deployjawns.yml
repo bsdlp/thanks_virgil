@@ -1,0 +1,21 @@
+---
+- name: provision Linode
+  local_action:
+    module: linode
+    api_key: "{{ linode_api_key }}"
+    datacenter: "{{ linode_datacenter }}"
+    distribution: "{{ linode_distribution }}"
+    name: "{{ linode_label }}"
+    plan: "{{ linode_plan }}"
+    state: "{{ started }}"
+    swap: "128"
+    wait: "{{ yes }}"
+  register: linode
+
+- name: deploy server and configure csgo
+  hosts: csgo
+  user: root
+  roles:
+    - common
+    - csgo
+
