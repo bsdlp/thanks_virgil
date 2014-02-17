@@ -36,7 +36,7 @@
   file: path=/srv/steam/.ssh/
         state=directory
         owner=steam
-        mode=0644
+        mode=0755
 
 - name: key myself to steamcmd
   get_url: dest=/srv/steam/.ssh/authorized_keys
