@@ -12,5 +12,5 @@ CEVO_SERVERNAME=cevo
 CEVO_SERVERNAME_OT=cevo_ot
 mirror_url=http://mirrors.linode.com/debian/
 deb_security_mirror_url=http://mirrors.linode.com/debian-security/
-github_username=fly
+github_user=fly
 
