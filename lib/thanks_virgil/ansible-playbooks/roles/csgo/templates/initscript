@@ -12,7 +12,7 @@
 ### END INIT INFO
 
 USER="steam"
-IP="{{ hostvars[inventory_host]['ansible_eth0']['ipv4']['address'] }}"
+IP="{{ hostvars[inventory_hostname]['ansible_eth0']['ipv4']['address'] }}"
 PORT="27015"
 
 DIR_ROOT="/srv/steam/csgo/"
