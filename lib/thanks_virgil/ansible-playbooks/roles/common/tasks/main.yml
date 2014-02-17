@@ -21,9 +21,12 @@
   apt: state=latest name={{ item }} update_cache=yes
   notify: purge nano
   with_items:
-  - screen
   - curl
+  - htop
   - lib32gcc1
+  - mtr-tiny
+  - screen
+  - sysstat
 
 - name: create steam user
   user: createhome=yes
