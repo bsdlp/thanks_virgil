@@ -45,7 +45,7 @@
 
 - name: copy over start.sh
   template: src=start.sh
-            dest=/usr/local/bin/startcsgo
+            dest=/srv/steam/csgo/startcsgo
             mode=0755
             owner=steam
 
