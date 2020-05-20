@@ -3,7 +3,7 @@ MarkupSafe==0.18
 PyYAML==3.10
 ansible==1.4.5
 ecdsa==0.13.3
-httplib2==0.8
+httplib2==0.18.0
 linode-python==1.0
 paramiko==1.12.1
 pycrypto==2.6.1
